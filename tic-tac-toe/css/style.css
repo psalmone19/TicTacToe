@@ -4,29 +4,26 @@
 
 #tictac {
   text-align: center;
-  background-color: #333;
+  background-color: #FFF;
   display: inline-block;
-  width: 100%;
+  width: 29%;
 }
 
 .main-box {
   display: inline-block;
-  width: 32.9%;
+  width: 32%;
 }
 
 .grid {
-  background-color: white;
-  height: 27vh;
-  margin-top: 5%;
-  margin-right: 3%;
-  display: flex;
+  background-color: #00deaf;
+  color: white;
+  height: 17vh;
   justify-content: center;
   align-items: center;
   font-size: 50px;
-}
-
-h1 {
-  text-align: center;
+  margin-top: 3%;
+  display: flex;
+  cursor: pointer;
 }
 
 .main-box .grid:first-child {
@@ -35,8 +32,37 @@ h1 {
 
 .main-box:last-child .grid {
   margin-right: 0;
-  margin-bottom: 0;
+  margin-left: 0;
 }
+
+.button{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.button button {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1em;
+  cursor: pointer;
+  color: white;
+  background-color: #303032;
+  background: linear-gradient(#888, #555);
+  padding: 6px;
+}
+
+h1 {
+  font-family: 'Indie Flower', cursive;
+  text-shadow: 1px 1px 5px #555;
+  color: #145245;
+  font-size: 50px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
 
 
 
