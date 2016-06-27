@@ -24,6 +24,7 @@
   margin-top: 3%;
   display: flex;
   cursor: pointer;
+  font-family: 'Arimo', sans-serif;
 }
 
 .main-box .grid:first-child {
