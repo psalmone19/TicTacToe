@@ -1,11 +1,11 @@
 //selects grid and alternates input X and O
 var input = "X";
-var grids = document.querySelectorAll('.grid');
+var grids = document.querySelectorAll('.grid'); //array
 var grid0, grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8;
 var reset = document.querySelector('button');
 var player = document.querySelector('p');
 
-
+//reads current value of grid
 var updateValue = function() {
   // column1
   grid0 = grids[0].innerHTML;
@@ -24,7 +24,7 @@ var updateValue = function() {
 };
 
 var columnWin = function (letter) {
-updateValue();
+updateValue(); //get value of grid
 
   if (grid0 == letter && grid1 == letter && grid2 == letter) {
     alert(letter + " is the winner!");
@@ -51,9 +51,9 @@ updateValue();
   }
 };
 
+
 var diagonalWin = function (letter) {
 updateValue();
-
   if (grid0 == letter && grid4 == letter && grid8 == letter) {
     alert(letter + " is the winner!");
   }
@@ -62,43 +62,41 @@ updateValue();
   }
 };
 
-
+//looping through array
 grids.forEach(function(grid) {
   // console.log(grid);
   grid.addEventListener('click', function(event) {
       console.log(event);
-
+      //checks if space is available
       if (event.target.innerHTML !== "&nbsp;") {
         return;
       }
-
+      //code for alternating X and Os
       event.target.innerHTML = input;
       if (input == "X") {
         input = "O";
       } else {
         input = "X";
       }
-
+      //changes current player display
       player.innerHTML = ("Current player: " + input);
 
+      //calling win functions and inputing X and O
       columnWin("X");
       columnWin("O");
-
       rowWin("X");
       rowWin("O");
-
       diagonalWin("X");
       diagonalWin("O");
   })
 });
 
+//function for reset button
 reset.addEventListener('click', function(e) {
   grids.forEach(function(grid) {
-    // make grid to ""
     grid.innerHTML = "&nbsp;"
   })
 });
 
-// where do you get the value?
-// where do you set it?
+
 
