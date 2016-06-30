@@ -49,11 +49,11 @@
   background-color: #303032;
   background: linear-gradient(#888, #555);
   padding: 6px;
+  margin-top: 50px;`
 }
 
 h1 {
-  font-family: 'Indie Flower', cursive;
-  text-shadow: 1px 1px 5px #555;
+  font-family: 'Candal', sans-serif;
   color: #145245;
   font-size: 50px;
   text-align: center;

@@ -1,28 +1,27 @@
-//selects grid and alternates input X and O
+//selects grid and alternates input X and O//
 var input = "X";
 var grids = document.querySelectorAll('.grid'); //array
 var grid0, grid1, grid2, grid3, grid4, grid5, grid6, grid7, grid8;
 var reset = document.querySelector('button');
 var player = document.querySelector('p');
 
-//reads current value of grid
+/////reads current value of grid/////
 var updateValue = function() {
   // column1
   grid0 = grids[0].innerHTML;
   grid1 = grids[1].innerHTML;
   grid2 = grids[2].innerHTML;
-
   // column2
   grid3 = grids[3].innerHTML;
   grid4 = grids[4].innerHTML;
   grid5 = grids[5].innerHTML;
-
   // column3
   grid6 = grids[6].innerHTML;
   grid7 = grids[7].innerHTML;
   grid8 = grids[8].innerHTML;
 };
 
+/////////////WIN LOGIC//////////////
 var columnWin = function (letter) {
 updateValue(); //get value of grid
 
@@ -36,6 +35,7 @@ updateValue(); //get value of grid
     alert(letter + " is the winner!");
   }
 };
+
 
 var rowWin = function (letter) {
 updateValue();
@@ -62,9 +62,10 @@ updateValue();
   }
 };
 
+/////////HEART OF THE CODE//////////
 //looping through array
 grids.forEach(function(grid) {
-  // console.log(grid);
+  console.log(grid);
   grid.addEventListener('click', function(event) {
       console.log(event);
       //checks if space is available
@@ -97,6 +98,7 @@ reset.addEventListener('click', function(e) {
     grid.innerHTML = "&nbsp;"
   })
 });
+
 
 
 
